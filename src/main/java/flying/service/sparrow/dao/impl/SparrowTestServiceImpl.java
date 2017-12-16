@@ -16,7 +16,7 @@ import flying.service.sparrow.dao.nozzle.SparrowTestServiceI;
  * @author Fallen
  * @since 2017-09-21
  */
-//@Service
+@Service
 public class SparrowTestServiceImpl extends ServiceImpl<SparrowTestMapper, SparrowTest> implements SparrowTestServiceI {
 	
 }

@@ -7,7 +7,7 @@ import flying.entity.sparrow.SparrowTest;
 import flying.service.sparrow.dao.impl.SparrowTestServiceImpl;
 import flying.service.sparrow.nozzle.SpTestServiceI;
 
-//@Service
+@Service
 public class SpTestImpl implements SpTestServiceI {
 
 	@Autowired
