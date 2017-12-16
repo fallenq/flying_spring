@@ -9,12 +9,13 @@
 		<result column="type" property="type" />
 		<result column="created_at" property="createdAt" />
 		<result column="update_at" property="updateAt" />
+		<result column="delete_flag" property="deleteFlag" />
 		<result column="delete_at" property="deleteAt" />
 	</resultMap>
 
     <!-- 通用查询结果列 -->
     <sql id="Base_Column_List">
-        id, name, type, created_at AS createdAt, update_at AS updateAt, delete_at AS deleteAt
+        id, name, type, created_at AS createdAt, update_at AS updateAt, delete_flag AS deleteFlag, delete_at AS deleteAt
     </sql>
 
 </mapper>

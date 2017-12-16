@@ -1,8 +1,7 @@
 package flying.mapper.sparrow;
 
-import com.baomidou.mybatisplus.mapper.BaseMapper;
-
 import flying.entity.sparrow.SparrowTest;
+import com.baomidou.mybatisplus.mapper.BaseMapper;
 
 /**
  * <p>

@@ -3,6 +3,7 @@ package flying.entity.sparrow;
 import com.baomidou.mybatisplus.enums.IdType;
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
+import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.annotations.TableField;
 import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
@@ -29,6 +30,9 @@ public class SparrowTest extends Model<SparrowTest> {
 	private Date createdAt;
 	@TableField("update_at")
 	private Date updateAt;
+	@TableField("delete_flag")
+	@TableLogic
+	private Integer deleteFlag;
 	@TableField("delete_at")
 	private Date deleteAt;
 
@@ -73,6 +77,14 @@ public class SparrowTest extends Model<SparrowTest> {
 		this.updateAt = updateAt;
 	}
 
+	public Integer getDeleteFlag() {
+		return deleteFlag;
+	}
+
+	public void setDeleteFlag(Integer deleteFlag) {
+		this.deleteFlag = deleteFlag;
+	}
+
 	public Date getDeleteAt() {
 		return deleteAt;
 	}
@@ -94,6 +106,7 @@ public class SparrowTest extends Model<SparrowTest> {
 			", type=" + type +
 			", createdAt=" + createdAt +
 			", updateAt=" + updateAt +
+			", deleteFlag=" + deleteFlag +
 			", deleteAt=" + deleteAt +
 			"}";
 	}
