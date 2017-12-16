@@ -1,5 +1,8 @@
 package flying.controller.api;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +22,11 @@ public class TestApiController {
 	
 	@RequestMapping("/")
 	@ResponseBody
-	public String index(HttpServletRequest request) {
-		SparrowTest test = testService.selectById(1);
-		System.out.println(test);
-		return "Test";
+	public Map<String, String> index(HttpServletRequest request) {
+//		SparrowTest test = testService.selectById(1);
+//		System.out.println(test);
+		Map<String, String> result = new HashMap<String, String>();
+		result.put("test", "hello");
+		return result;
 	}
 }
