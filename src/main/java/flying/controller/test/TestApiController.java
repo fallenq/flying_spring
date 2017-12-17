@@ -1,4 +1,4 @@
-package flying.controller.api;
+package flying.controller.test;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -24,8 +24,7 @@ public class TestApiController {
 	@RequestMapping("/")
 	@ResponseBody
 	public Map<String, String> index(HttpServletRequest request) {
-//		SparrowTest test = new SparrowTest();
-//		System.out.println(testService.getById(1));
+		System.out.println(testService.getById(1));
 		Map<String, String> result = new HashMap<String, String>();
 //		HttpSession session = request.getSession();
 //		session.setAttribute("test", "world");

@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -15,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 //import com.service.tool.WarnMsgTool;
 //import com.service.tool.impl.ResponseImpl;
 
+//@Component
 public class LoginInterceptor implements HandlerInterceptor {
 	
 	@Autowired
@@ -41,7 +43,7 @@ public class LoginInterceptor implements HandlerInterceptor {
 //			response.getWriter().write(JSON.toJSONString(responseImpl.combineResponse()));
 //			return false;
 //		}
-		return false;
+		return true;
 	}
 
 	@Override
