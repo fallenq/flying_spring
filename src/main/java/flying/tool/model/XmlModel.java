@@ -1,4 +1,4 @@
-package flying.service.model;
+package flying.tool.model;
 
 import java.util.ArrayList;
 import java.util.List;

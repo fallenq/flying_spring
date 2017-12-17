@@ -1,4 +1,4 @@
-package flying.service.model;
+package flying.tool.model;
 
 public class LoginInfoModel {
 	
