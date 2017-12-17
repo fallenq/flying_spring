@@ -1,7 +1,7 @@
 package flying.mapper.sparrow;
 
 import flying.entity.sparrow.SparrowTest;
-import com.baomidou.mybatisplus.mapper.BaseMapper;
+import flying.mapper.SuperMapper;
 
 /**
  * <p>
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.mapper.BaseMapper;
  * @author Fallen
  * @since 2017-09-10
  */
-public interface SparrowTestMapper extends BaseMapper<SparrowTest> {
+public interface SparrowTestMapper extends SuperMapper<SparrowTest> {
 
 }

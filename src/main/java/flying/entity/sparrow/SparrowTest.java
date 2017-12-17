@@ -1,11 +1,13 @@
 package flying.entity.sparrow;
 
 import com.baomidou.mybatisplus.enums.IdType;
+
+import flying.entity.SuperEntity;
+
 import java.util.Date;
 import com.baomidou.mybatisplus.annotations.TableId;
 import com.baomidou.mybatisplus.annotations.TableLogic;
 import com.baomidou.mybatisplus.annotations.TableField;
-import com.baomidou.mybatisplus.activerecord.Model;
 import com.baomidou.mybatisplus.annotations.TableName;
 import java.io.Serializable;
 
@@ -18,7 +20,7 @@ import java.io.Serializable;
  * @since 2017-09-10
  */
 @TableName("sparrow_test")
-public class SparrowTest extends Model<SparrowTest> {
+public class SparrowTest extends SuperEntity<SparrowTest> {
 
     private static final long serialVersionUID = 1L;
 
