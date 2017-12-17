@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<warn>
+	<message id="1" value="提交失败"/>
+	<message id="2" value="系统繁忙，清稍后"/>
+	<message id="3" value="客户已有新版本，请更新客服端"/>
+	<message id="4" value="验证码有误"/>
+	<message id="5" value="参数有误"/>
+</warn>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<warn>
+	<message id="1" value="提交成功"/>
+	<message id="2" value="提交失败"/>
+	<message id="3" value="注册成功"/>
+	<message id="4" value="注册失败，请稍后尝试"/>
+	<message id="5" value="该手机号已注册"/>
+	<message id="6" value="账号不存在"/>
+	<message id="7" value="用户名与密码不一致"/>
+	<message id="8" value="手机验证码已发送，请稍后再试"/>
+	<message id="9" value="验证码已发送，请稍后再试"/>
+	<message id="10" value="用户已绑定手机号"/>
+	<message id="11" value="用户未绑定手机号"/>
+	<message id="12" value="手机号不存在"/>
+	<message id="13" value="用户密码与之前一致"/>
+</warn>
