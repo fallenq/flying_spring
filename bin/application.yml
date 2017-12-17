@@ -8,6 +8,10 @@ spring:
     restart:
       enabled: false
       
+  # session
+  session:
+    store-type: redis
+    
   # redis 
   redis:
     database: 0
@@ -21,9 +25,6 @@ spring:
       max-idle: 8
       min-idle: 0 
       
-  # session
-  session:
-    store-type: redis
 
   # DATABASE CONFIG
   datasource:
@@ -35,7 +36,7 @@ spring:
 
 #mybatis
 mybatis-plus:
-  mapper-locations: classpath:/mybatis/mapper/sparrow/*Mapper.xml
+  mapper-locations: classpath:/mybatis/mapper/**/*Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: flying.entity.sparrow
   #typeEnumsPackage: com.baomidou.springboot.entity.enums
