@@ -16,12 +16,13 @@ import flying.service.sparrow.dao.nozzle.SparrowTestServiceI;
 import flying.service.sparrow.nozzle.SpTestServiceI;
 
 @RestController
+@RequestMapping("/api/test")
 public class TestApiController {
 	
 	@Autowired
 	private SpTestServiceI testService;
 	
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	@ResponseBody
 	public Map<String, String> index(HttpServletRequest request) {
 		System.out.println(testService.getById(1));
@@ -30,5 +31,10 @@ public class TestApiController {
 //		session.setAttribute("test", "world");
 		result.put("test", "hello");
 		return result;
+	}
+	
+	@RequestMapping("/test")
+	public String test(HttpServletRequest request) {
+		return "test";
 	}
 }
