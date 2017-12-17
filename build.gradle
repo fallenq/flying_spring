@@ -15,7 +15,7 @@ apply plugin: 'eclipse'
 apply plugin: 'org.springframework.boot'
 
 group = 'com.fallen.sparrow'
-version = '0.0.1-SNAPSHOT'
+version = '0.0.1-DEMO'
 sourceCompatibility = 1.8
 
 repositories {
