@@ -11,6 +11,7 @@ public class FlyingApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println("hello");
 	}
 
 }
