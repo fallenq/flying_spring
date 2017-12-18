@@ -47,7 +47,7 @@ public class CommonTool {
 		}
 		String validateCode = "";
 		for (int countIndex = 0; countIndex < length; countIndex++) {
-			validateCode += String.valueOf(CommonTool.createRandomInt(0, 9));
+			validateCode += String.valueOf(createRandomInt(0, 9));
 		}
 		return validateCode;
 	}
@@ -75,22 +75,5 @@ public class CommonTool {
 		}
 		return request.getRemoteAddr();
 	}
-//
-//	/**
-//	 * Parse content to Class
-//	 * 
-//	 * @param content
-//	 * @param clazz
-//	 * @return
-//	 */
-//	public static <T> T parseObject(String content, Class<T> clazz) {
-//		if (!StringTool.isAvailableString(content)) {
-//			return null;
-//		}
-//		try {
-//			return JSON.parseObject(content, clazz);
-//		} catch (Exception e) {
-//			return null;
-//		}
-//	}
+	
 }

@@ -18,7 +18,7 @@ public class WarnMsgTool {
 	public static synchronized Map<Integer, String> getCommonMap() {
 		if (commonMap == null) {
 			commonMap = CommonTool.emptyIntMap();
-			XmlModel root = XmlTool.getXmlModelList("config/service/warn-common-msg.xml");
+			XmlModel root = XmlTool.getXmlModelList("message/params/warn-common-msg.xml");
 			if (root != null && root.getChildList().size() > 0) {
 				for (XmlModel model : root.getChildList()) {
 					Map<String, String> attributes = model.getAttributes();
@@ -32,7 +32,7 @@ public class WarnMsgTool {
 	public static synchronized Map<Integer, String> getSparrowMap() {
 		if (sparrowMap == null) {
 			sparrowMap = CommonTool.emptyIntMap();
-			XmlModel root = XmlTool.getXmlModelList("config/service/warn-sparrow-msg.xml");
+			XmlModel root = XmlTool.getXmlModelList("message/params/warn-sparrow-msg.xml");
 			if (root != null && root.getChildList().size() > 0) {
 				for (XmlModel model : root.getChildList()) {
 					Map<String, String> attributes = model.getAttributes();
