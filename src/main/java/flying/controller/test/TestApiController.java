@@ -23,7 +23,6 @@ public class TestApiController {
 	private SpTestServiceI testService;
 	
 	@RequestMapping("/index")
-	@ResponseBody
 	public Map<String, String> index(HttpServletRequest request) {
 		System.out.println(testService.getById(1));
 		Map<String, String> result = new HashMap<String, String>();

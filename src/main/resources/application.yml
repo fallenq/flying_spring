@@ -1,7 +1,12 @@
 #app
 server:
-    port: 8080
-
+    port: 8080 
+    
+upload:
+  pictures:
+    uploadPath: file:./pictures
+    anonymousPicture: classpath:/images/pkq.jpg
+  
 #spring
 spring:
 #  devtools:
@@ -11,8 +16,12 @@ spring:
   # mvc
 #  mvc:
 #    view:
-#      prefix: 
-#      suffix:  
+#      prefix: /templates
+#      suffix: html
+#  thymeleaf:
+#    cache: false
+#    prefix: classpath:/templates/
+#    suffix: .html
       
   # session
   session:
@@ -39,6 +48,11 @@ spring:
     url: jdbc:mysql://localhost:3306/sparrow?useUnicode=true&characterEncoding=utf8&useSSL=false
     username: root
     password: 
+    
+  http:
+    multipart:
+      max-file-size: 2Mb
+      max-request-size: 50Mb
 
 #mybatis
 mybatis:
