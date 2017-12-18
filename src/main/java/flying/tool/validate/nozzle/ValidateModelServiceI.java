@@ -1,4 +1,4 @@
-package flying.tool.nozzle.validate;
+package flying.tool.validate.nozzle;
 
 public interface ValidateModelServiceI {
 //	public ValidateModelServiceI getValidateService();
