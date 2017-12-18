@@ -13,14 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import flying.entity.sparrow.SparrowTest;
 import flying.service.sparrow.dao.nozzle.SparrowTestServiceI;
-import flying.service.sparrow.nozzle.SpTestServiceI;
+import flying.service.sparrow.functions.SpTestService;
 
 @RestController
 @RequestMapping("/api/test")
 public class TestApiController {
 	
 	@Autowired
-	private SpTestServiceI testService;
+	private SpTestService testService;
 	
 	@RequestMapping("/index")
 	public Map<String, String> index(HttpServletRequest request) {

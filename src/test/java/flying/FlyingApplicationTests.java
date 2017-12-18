@@ -15,9 +15,9 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import flying.config.enums.ResponseCommonMsgEnum;
+import flying.service.sparrow.functions.SpTestService;
+import flying.tool.AppContextTool;
 import flying.tool.WarnMsgTool;
-import flying.tool.impl.AppContextImpl;
-import flying.tool.nozzle.AppContextServiceI;
 import flying.tool.nozzle.RedisServiceI;
 
 @RunWith(SpringRunner.class)
@@ -25,10 +25,13 @@ import flying.tool.nozzle.RedisServiceI;
 public class FlyingApplicationTests {
 	
 	@Autowired
-	private AppContextServiceI appService;
+	private AppContextTool appService;
+	@Autowired
+	private SpTestService testService;
 
 	@Test
 	public void contextLoads() throws IOException {
+		System.out.println(testService.getById(1));
 //		ObjectMapper mapper = new ObjectMapper();
 //		Map<String, String> result = new HashMap<String, String>();
 //		result.put("test", "hello");

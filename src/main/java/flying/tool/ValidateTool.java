@@ -23,7 +23,7 @@ public class ValidateTool {
 	 * @param type
 	 * @return
 	 */
-	public ValidateModelServiceI getValidateService(RedisServiceI redisService, int type) {
+	public ValidateModelServiceI getValidateService(int type, RedisServiceI redisService) {
 		switch (type) {
 			case 1:
 				return LoginCodeValidateImpl.getInstance(redisService);

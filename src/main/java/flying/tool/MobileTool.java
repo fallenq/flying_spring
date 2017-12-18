@@ -1,6 +1,5 @@
 package flying.tool;
 
-import flying.tool.impl.ResponseImpl;
 import flying.tool.model.ResponseModel;
 
 public class MobileTool {
@@ -28,7 +27,7 @@ public class MobileTool {
 	 * @return
 	 */
 	public ResponseModel sendMobileMsg(String mobile, String content, String templateId) {
-		ResponseImpl responseService = ResponseImpl.getInstance();
+		ResponseTool responseService = ResponseTool.getInstance();
 		// TODO: use send sms with third api
 		responseService.successStatus();
 		return responseService.combineResponse();
@@ -43,7 +42,7 @@ public class MobileTool {
 	 * @return
 	 */
 	public ResponseModel sendMobileCode(String mobile, String vcode) {
-		ResponseImpl responseService = ResponseImpl.getInstance();
+		ResponseTool responseService = ResponseTool.getInstance();
 		// TODO: add mobile sms template ID
 		ResponseModel sendResult = sendMobileMsg(mobile, vcode, "");
 		if (responseService.isSuccess(sendResult)) {

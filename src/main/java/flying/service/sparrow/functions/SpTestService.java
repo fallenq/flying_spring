@@ -1,19 +1,17 @@
-package flying.service.sparrow.impl;
+package flying.service.sparrow.functions;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
 
 import flying.entity.sparrow.SparrowTest;
 import flying.service.sparrow.dao.nozzle.SparrowTestServiceI;
-import flying.service.sparrow.nozzle.SpTestServiceI;
 
-@Service
-public class SpTestImpl implements SpTestServiceI {
+@Repository
+public class SpTestService {
 
 	@Autowired
 	private SparrowTestServiceI testService;
 
-	@Override
 	public SparrowTest getById(int id) {
 		return testService.selectById(id);
 	}
