@@ -25,7 +25,7 @@ public class AppContextImpl implements AppContextServiceI {
 
 	@Override
 	public RedisServiceI getRedis(int dbIndex) {
-		RedisServiceI redisService = (RedisServiceI) getAppContext().getBean("redisService");
+		RedisServiceI redisService = getRedis();
 		redisService.selectDb(dbIndex);
 		return redisService;	
 	}
