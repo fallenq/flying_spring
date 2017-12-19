@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flying.mapper.sparrow.SparrowUserAdditionMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="flying.entity.sparrow.SparrowUserAddition">
+		<id column="id" property="id" />
+		<result column="user_id" property="userId" />
+		<result column="home_address" property="homeAddress" />
+		<result column="work_address" property="workAddress" />
+		<result column="register_address" property="registerAddress" />
+		<result column="ip" property="ip" />
+		<result column="location_id" property="locationId" />
+		<result column="last_login_ip" property="lastLoginIp" />
+		<result column="last_location_id" property="lastLocationId" />
+		<result column="lock_remark" property="lockRemark" />
+		<result column="created_at" property="createdAt" />
+		<result column="update_at" property="updateAt" />
+		<result column="delete_flag" property="deleteFlag" />
+		<result column="delete_at" property="deleteAt" />
+		<result column="last_login_at" property="lastLoginAt" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, home_address AS homeAddress, work_address AS workAddress, register_address AS registerAddress, ip, location_id AS locationId, last_login_ip AS lastLoginIp, last_location_id AS lastLocationId, lock_remark AS lockRemark, created_at AS createdAt, update_at AS updateAt, delete_flag AS deleteFlag, delete_at AS deleteAt, last_login_at AS lastLoginAt
+    </sql>
+
+</mapper>

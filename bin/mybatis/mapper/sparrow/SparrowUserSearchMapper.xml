@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flying.mapper.sparrow.SparrowUserSearchMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="flying.entity.sparrow.SparrowUserSearch">
+		<id column="id" property="id" />
+		<result column="user_id" property="userId" />
+		<result column="type" property="type" />
+		<result column="content_class_id" property="contentClassId" />
+		<result column="content" property="content" />
+		<result column="location_id" property="locationId" />
+		<result column="ip" property="ip" />
+		<result column="share_id" property="shareId" />
+		<result column="created_at" property="createdAt" />
+		<result column="update_at" property="updateAt" />
+		<result column="delete_flag" property="deleteFlag" />
+		<result column="delete_at" property="deleteAt" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, type, content_class_id AS contentClassId, content, location_id AS locationId, ip, share_id AS shareId, created_at AS createdAt, update_at AS updateAt, delete_flag AS deleteFlag, delete_at AS deleteAt
+    </sql>
+
+</mapper>
