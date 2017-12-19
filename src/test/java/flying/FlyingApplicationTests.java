@@ -24,14 +24,14 @@ import flying.tool.nozzle.RedisServiceI;
 @SpringBootTest
 public class FlyingApplicationTests {
 	
-	@Autowired
-	private AppContextTool appService;
-	@Autowired
-	private SpTestService testService;
+//	@Autowired
+//	private AppContextTool appService;
+//	@Autowired
+//	private SpTestService testService;
 
 	@Test
 	public void contextLoads() throws IOException {
-		System.out.println(testService.getById(1));
+//		System.out.println(testService.getById(1));
 //		ObjectMapper mapper = new ObjectMapper();
 //		Map<String, String> result = new HashMap<String, String>();
 //		result.put("test", "hello");
