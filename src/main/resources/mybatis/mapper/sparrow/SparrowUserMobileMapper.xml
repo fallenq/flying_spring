@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="flying.mapper.sparrow.SparrowUserMobileMapper">
+
+	<!-- 通用查询映射结果 -->
+	<resultMap id="BaseResultMap" type="flying.entity.sparrow.SparrowUserMobile">
+		<id column="id" property="id" />
+		<result column="user_id" property="userId" />
+		<result column="mobile" property="mobile" />
+		<result column="sim_no" property="simNo" />
+		<result column="mobile_uni" property="mobileUni" />
+		<result column="operation_name" property="operationName" />
+		<result column="status" property="status" />
+		<result column="created_at" property="createdAt" />
+		<result column="update_at" property="updateAt" />
+		<result column="delete_flag" property="deleteFlag" />
+		<result column="delete_at" property="deleteAt" />
+	</resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, user_id AS userId, mobile, sim_no AS simNo, mobile_uni AS mobileUni, operation_name AS operationName, status, created_at AS createdAt, update_at AS updateAt, delete_flag AS deleteFlag, delete_at AS deleteAt
+    </sql>
+
+</mapper>
