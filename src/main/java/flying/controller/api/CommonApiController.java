@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import flying.config.enums.RedisSparrowEnum;
 import flying.config.enums.ResponseSparrowMsgEnum;
 import flying.config.params.CommonConfig;
-import flying.service.sparrow.functions.SpVersionService;
+import flying.service.sparrow.basic.SpVersionService;
 import flying.tool.AppContextTool;
 import flying.tool.CommonTool;
 import flying.tool.ResponseTool;

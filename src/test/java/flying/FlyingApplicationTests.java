@@ -15,7 +15,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import flying.config.enums.ResponseCommonMsgEnum;
-import flying.service.sparrow.functions.SpTestService;
+import flying.service.sparrow.basic.SpTestService;
 import flying.tool.AppContextTool;
 import flying.tool.WarnMsgTool;
 import flying.tool.nozzle.RedisServiceI;

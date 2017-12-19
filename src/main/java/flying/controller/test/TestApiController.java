@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import flying.entity.sparrow.SparrowTest;
+import flying.service.sparrow.basic.SpTestService;
 import flying.service.sparrow.dao.nozzle.SparrowTestServiceI;
-import flying.service.sparrow.functions.SpTestService;
 
 @RestController
 @RequestMapping("/api/test")

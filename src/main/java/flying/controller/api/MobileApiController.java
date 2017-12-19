@@ -12,7 +12,8 @@ import flying.config.enums.ResponseCommonMsgEnum;
 import flying.config.enums.ResponseSparrowMsgEnum;
 import flying.config.enums.SparrowValidateEnum;
 import flying.config.params.CommonConfig;
-import flying.service.sparrow.functions.SpUserMobileService;
+import flying.service.sparrow.basic.SpUserMobileService;
+import flying.service.sparrow.functions.SpUserFuncService;
 import flying.tool.AppContextTool;
 import flying.tool.CommonTool;
 import flying.tool.MobileTool;
@@ -32,9 +33,8 @@ public class MobileApiController {
 	private AppContextTool appContext;
 	@Autowired
 	private SpUserMobileService mobileService;
-	
-//	@Autowired
-//	private SpUserFuncServiceI userFuncService;
+	@Autowired
+	private SpUserFuncService userFuncService;
 
 	/**
 	 * Send validate code in sms
@@ -109,15 +109,14 @@ public class MobileApiController {
 	@RequestMapping(value = "/bind", method = RequestMethod.POST)
 	public ResponseModel bindMobile(HttpServletRequest request) {
 		ResponseTool responseService = ResponseTool.getInstance();
-//		LoginInfoModel loginInfo = userFuncService.getLoginInfo(SessionTool.getInstance(request));
+		LoginInfoModel loginInfo = userFuncService.getLoginInfo(SessionTool.getInstance(request, appContext.getRedis()));
 		String mobile = request.getParameter("mobile");
 		String vcode = request.getParameter("vcode");
 		ValidateModelServiceI validateService = ValidateTool.getInstance().getValidateService(SparrowValidateEnum.MOBILE_VALIDATE_SEND_TYPE.getValue(), appContext.getRedis(RedisSparrowEnum.BASIC.getValue()));
 		if (!validateService.determine(mobile, vcode)) {
 			return responseService.combineResponse(WarnMsgTool.getCommonValue(ResponseCommonMsgEnum.VALIDATE_CODE_ERROR.getValue()));
 		}
-		return null;
-//		return userFuncService.bindMobile(loginInfo.getUserId(), mobile);
+		return userFuncService.bindMobile(loginInfo.getUserId(), mobile);
 	}
 
 	/**
@@ -126,10 +125,10 @@ public class MobileApiController {
 	 * @param request
 	 * @return
 	 */
-//	@RequestMapping(value = "/unbind", method = RequestMethod.POST)
-//	public ResponseModel unbindMobile(HttpServletRequest request) {
-//		LoginInfoModel loginInfo = userFuncService.getLoginInfo(SessionTool.getInstance(request));
-//		return userFuncService.unbindMobile(loginInfo.getUserId());
-//	}
+	@RequestMapping(value = "/unbind", method = RequestMethod.POST)
+	public ResponseModel unbindMobile(HttpServletRequest request) {
+		LoginInfoModel loginInfo = userFuncService.getLoginInfo(SessionTool.getInstance(request));
+		return userFuncService.unbindMobile(loginInfo.getUserId());
+	}
 
 }

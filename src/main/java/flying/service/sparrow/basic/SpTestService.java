@@ -1,4 +1,4 @@
-package flying.service.sparrow.functions;
+package flying.service.sparrow.basic;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;

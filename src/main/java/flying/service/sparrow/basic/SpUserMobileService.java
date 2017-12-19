@@ -1,4 +1,4 @@
-package flying.service.sparrow.functions;
+package flying.service.sparrow.basic;
 
 import java.util.Date;
 

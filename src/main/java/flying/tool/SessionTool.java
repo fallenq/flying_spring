@@ -83,9 +83,8 @@ public class SessionTool {
 	 * @return
 	 */
 	public <T> T getSessionRedis(String name, Class<T> clazz) {
-//		JSONObject object = getSessionRedis(name);
-//		return CommonTool.parseJSONObject(object, clazz);
-		return null;
+		String value = getSessionRedis(name);
+		return JsonTool.read(value, clazz);
 	}
 
 	/**
