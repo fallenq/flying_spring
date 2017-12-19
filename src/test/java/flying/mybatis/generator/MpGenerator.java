@@ -28,9 +28,9 @@ public class MpGenerator {
      * MySQL 生成演示
      * </p>
      */
-//    public static void main(String[] args) {
-//    	generator();
-//    }
+    public static void main(String[] args) {
+    	generator();
+    }
     
 	private static void generator() {
 
