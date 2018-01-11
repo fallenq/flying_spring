@@ -117,7 +117,7 @@ public class ResponseTool {
 		return combineResponse(WarnMsgTool.getCommonValue(ResponseCommonMsgEnum.PARAM_ERROR.getValue()));
 	}
 
-	public ResponseModel noSpUserCombine() {
+	public ResponseModel emptySpUserCombine() {
 		return combineResponse(WarnMsgTool.getSparrowValue(ResponseSparrowMsgEnum.USER_NOEXISTS.getValue()));
 	}
 

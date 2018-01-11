@@ -68,7 +68,7 @@ public class UserApiController {
 				responseService.setMessage(WarnMsgTool.getSparrowValue(ResponseSparrowMsgEnum.USER_LOGININFO_ERROR.getValue()));
 			}
 		} catch (Exception e) {
-			return responseService.noSpUserCombine();
+			return responseService.emptySpUserCombine();
 		}
 		return responseService.combineResponse();
 	}
@@ -146,7 +146,7 @@ public class UserApiController {
 			}
 			responseService.successStatus();
 		} else {
-			return responseService.noSpUserCombine();
+			return responseService.emptySpUserCombine();
 		}
 		return responseService.combineResponse();
 	}

@@ -70,7 +70,7 @@ public class SpUserFuncService {
 		if (sparrowUser == null) {
 			sparrowUser = userService.getUserById(userId);
 			if (sparrowUser == null) {
-				return responseService.noSpUserCombine();
+				return responseService.emptySpUserCombine();
 			}
 		}
 		sparrowUser.setNickname((String) userInfo.getOrDefault("nickname", ""));
@@ -95,7 +95,7 @@ public class SpUserFuncService {
 		if (sparrowUser == null) {
 			sparrowUser = userService.getUserById(userId);
 			if (sparrowUser == null) {
-				return responseService.noSpUserCombine();
+				return responseService.emptySpUserCombine();
 			}
 		}
 		if (type == 1) {
@@ -123,7 +123,7 @@ public class SpUserFuncService {
 		}
 		SparrowUser sparrowUser = userService.getUserByMobile(mobile);
 		if (sparrowUser == null) {
-			return responseService.noSpUserCombine();
+			return responseService.emptySpUserCombine();
 		}
 		return editPassword(sparrowUser.getId(), password, 1, sparrowUser);
 	}
@@ -172,7 +172,7 @@ public class SpUserFuncService {
 				return responseService.errorSubmitCombine();
 			}
 		}
-		return responseService.noSpUserCombine();
+		return responseService.emptySpUserCombine();
 	}
 
 	public ResponseModel unbindMobile(int userId) {
@@ -192,7 +192,7 @@ public class SpUserFuncService {
 				return responseService.errorSubmitCombine();
 			}
 		}
-		return responseService.noSpUserCombine();
+		return responseService.emptySpUserCombine();
 	}
 	
 }
