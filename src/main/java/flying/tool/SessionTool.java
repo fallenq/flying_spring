@@ -41,7 +41,7 @@ public class SessionTool {
 	}
 
 	/**
-	 * Get session by name
+	 * Set session by name
 	 * 
 	 * @param keyName
 	 * @return
