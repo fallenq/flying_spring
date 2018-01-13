@@ -16,7 +16,7 @@ public class FileTool {
 		return name.substring(name.lastIndexOf("."));
 	}
 	
-	public String getResourceRelative(String dirname, String rootDir) {
+	protected String getResourceRelative(String dirname, String rootDir) {
 		if (dirname.startsWith("../")) {
 			dirname = dirname.replaceFirst("../", "");
 		}
@@ -29,16 +29,20 @@ public class FileTool {
 		return dirname;
 	}
 	
-	public String getResourceRelative(String dirname) {
+	protected String getResourceRelative(String dirname) {
 		return getResourceRelative(dirname, UploadConfig.DEFAULT_UPLOAD_ROOT);
 	}
 	
-	public boolean createOrValidateDir(String dirname) {
+	protected boolean createOrValidateDir(String dirname) {
 		File dir = new File(dirname);
 		if (!dir.exists()) {
 			return dir.mkdirs();
 		}
 		return true;
+	}
+	
+	public String getOutFileName(String dirname) {
+		return dirname.substring(dirname.indexOf(UploadConfig.DEFAULT_UPLOAD_ROOT) - 1);
 	}
 
 }

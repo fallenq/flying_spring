@@ -23,7 +23,7 @@ public class PictureUploadApiController {
 		}
 		Resource resource = pictureUploadTool.localUpload(file);
 		if (resource != null) {
-			System.out.println(resource.getURL().getPath());
+			System.out.println(pictureUploadTool.getOutFileName(resource.getURL().getPath()));
 		}
 		return "OK";
 	}
