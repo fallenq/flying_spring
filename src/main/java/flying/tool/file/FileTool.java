@@ -1,7 +1,9 @@
 package flying.tool.file;
 
 import java.io.File;
+import java.io.IOException;
 
+import org.springframework.core.io.Resource;
 import org.springframework.web.multipart.MultipartFile;
 
 import flying.config.params.UploadConfig;
@@ -41,8 +43,18 @@ public class FileTool {
 		return true;
 	}
 	
-	public String getOutFileName(String dirname) {
-		return dirname.substring(dirname.indexOf(UploadConfig.DEFAULT_UPLOAD_ROOT) - 1);
+	public String getOutFileName(Resource resource) {
+		String dirname = "";
+		if (resource != null) {
+			try {
+				dirname = resource.getURL().getPath();
+				return dirname.substring(dirname.indexOf(UploadConfig.DEFAULT_UPLOAD_ROOT) - 1);
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+//				e.printStackTrace();
+			}
+		}
+		return dirname;
 	}
 
 }
