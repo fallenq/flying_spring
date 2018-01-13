@@ -4,6 +4,7 @@ server:
     
 upload:
   pictures:
+#    uploadPath: file:./upload/pictures
     uploadPath: file:../upload/pictures
     anonymousPicture: classpath:/images/pkq.jpg
   
