@@ -1,7 +1,5 @@
 package flying.tool.validate.impl;
 
-import java.text.ParseException;
-import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 import flying.tool.StringTool;
@@ -24,10 +22,10 @@ public class BaseValidateModel implements ValidateModelServiceI {
 		this.redisService = redisService;
 	}
 
-//	@Override
-//	public ValidateModelServiceI getValidateService() {
-//		return validateService;
-//	}
+	// @Override
+	// public ValidateModelServiceI getValidateService() {
+	// return validateService;
+	// }
 
 	@Override
 	public String getRedisKey() {
@@ -41,13 +39,8 @@ public class BaseValidateModel implements ValidateModelServiceI {
 
 	@Override
 	public void setRedisLimitKey(String redisLimitItem) {
-		try {
-			this.redisLimitKey = redisLimitPrefix + TimeTool.formatDate(new Date(), "yyyy-MM-dd");
-			this.redisLimitItem = redisLimitItem;
-		} catch (ParseException e) {
-			this.redisLimitKey = "";
-			this.redisLimitItem = "";
-		}
+		this.redisLimitKey = redisLimitPrefix + TimeTool.simpleDate();
+		this.redisLimitItem = redisLimitItem;
 	}
 
 	@Override

@@ -18,6 +18,7 @@ import flying.config.enums.ResponseCommonMsgEnum;
 import flying.service.sparrow.basic.SpTestService;
 import flying.tool.AppContextTool;
 import flying.tool.WarnMsgTool;
+import flying.tool.file.PictureUploadTool;
 import flying.tool.nozzle.RedisServiceI;
 
 @RunWith(SpringRunner.class)
@@ -28,9 +29,12 @@ public class FlyingApplicationTests {
 //	private AppContextTool appService;
 //	@Autowired
 //	private SpTestService testService;
+//	@Autowired
+//	private PictureUploadTool pictureUploadTool;
 
 	@Test
 	public void contextLoads() throws IOException {
+//		pictureUploadTool.test();
 //		System.out.println(testService.getById(1));
 //		ObjectMapper mapper = new ObjectMapper();
 //		Map<String, String> result = new HashMap<String, String>();

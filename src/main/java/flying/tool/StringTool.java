@@ -54,7 +54,7 @@ public class StringTool {
 			return mobile;
 		}
 	}
-	
+
 	/**
 	 * Validate whether error string
 	 * 
@@ -70,7 +70,7 @@ public class StringTool {
 		}
 		return false;
 	}
-	
+
 	/**
 	 * Parse string value
 	 * 
