@@ -29,7 +29,7 @@ public class PictureUploadTool extends FileTool implements UploadToolNozzle {
 		String dirname = getUploadUrl() + "/" + TimeTool.currentDate("yyyyMMdd");
 		if (createOrValidateDir(dirname)) {
 			try {
-				Resource resource = getUploadResource().createRelative(getResourceRelative(dirname));
+				Resource resource = createRelativeResource(getUploadResource(), getResourceRelative(dirname));
 				File tempFile = File.createTempFile("pic", fileExtension, resource.getFile());
 				InputStream in = file.getInputStream();
 				OutputStream out = new FileOutputStream(tempFile);

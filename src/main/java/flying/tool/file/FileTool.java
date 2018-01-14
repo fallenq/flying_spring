@@ -56,5 +56,15 @@ public class FileTool {
 		}
 		return dirname;
 	}
+	
+	public Resource createRelativeResource(Resource resource, String relativePath) {
+		try {
+			return resource.createRelative(relativePath);
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+//			e.printStackTrace();
+		}
+		return null;
+	}
 
 }
