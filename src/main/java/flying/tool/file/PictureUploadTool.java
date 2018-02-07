@@ -14,6 +14,7 @@ import org.springframework.stereotype.Repository;
 import org.springframework.web.multipart.MultipartFile;
 
 import flying.config.PictureUploadProperties;
+import flying.config.params.UploadConfig;
 import flying.tool.TimeTool;
 import flying.tool.file.nozzle.UploadToolNozzle;
 
@@ -22,6 +23,14 @@ public class PictureUploadTool extends FileTool implements UploadToolNozzle {
 	
 	@Autowired
 	private PictureUploadProperties uploadProperties;
+	
+	public void test() {
+		String dirname = getUploadUrl() + "/" + TimeTool.currentDate("yyyyMMdd");
+		System.out.println("地址：" + dirname);
+		String relative = getResourceRelative(dirname);
+		System.out.println("relative：" + relative);
+		System.out.println(UploadConfig.DEFAULT_UPLOAD_ROOT);
+	}
 	
 	@Override
 	public Resource localUpload(MultipartFile file) {

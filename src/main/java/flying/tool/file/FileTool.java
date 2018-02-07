@@ -19,16 +19,19 @@ public class FileTool {
 	}
 	
 	protected String getResourceRelative(String dirname, String rootDir) {
-		if (dirname.startsWith("../")) {
-			dirname = dirname.replaceFirst("../", "");
-		}
-		if (dirname.startsWith("./")) {
-			dirname = dirname.replaceFirst("./", "");
-		}
-		if (!rootDir.isEmpty()) {
-			dirname = dirname.replaceFirst(rootDir + "/", "");
-		}
-		return dirname;
+//		if (dirname.startsWith("../")) {
+//			dirname = dirname.replaceFirst("../", "");
+//		}
+//		if (dirname.startsWith("./")) {
+//			dirname = dirname.replaceFirst("./", "");
+//		}
+//		if (!rootDir.isEmpty()) {
+//			dirname = dirname.replaceFirst(rootDir + "/", "");
+//		}
+//		return dirname;
+		rootDir = rootDir.concat("/");
+		int startIndex = dirname.indexOf(rootDir);
+		return dirname.substring(startIndex + rootDir.length());
 	}
 	
 	protected String getResourceRelative(String dirname) {
